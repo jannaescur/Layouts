@@ -24,21 +24,45 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
         android:layout_weight="10">
-
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Choose your avatar!"
             android:gravity="center"
-            android:textSize="20dp"/>
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="6dp"
+            android:text="Man"
+            android:gravity="center"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:thumbTint="@color/colorPrimaryDark"
+            android:/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:text="Woman"
+            android:gravity="center"/>
+
+
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="50"
+        android:layout_weight="40"
         android:orientation="vertical"
         android:weightSum="100">
 
@@ -46,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:text="Business man"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:gravity="center"
             android:layout_weight="20"/>
 
@@ -92,9 +116,10 @@
         android:layout_height="0dp"
         android:layout_weight="40"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp">
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="40dp"
+        android:weightSum="100">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -157,7 +182,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="30"
+            android:layout_weight="40"
             android:orientation="vertical"
             android:weightSum="80">
 
@@ -172,53 +197,120 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="10"
-                android:thumbTint="@color/colorPrimary"/>
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
 
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="10"
-                android:thumbTint="@color/colorPrimary"/>
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
 
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="10"
-                android:thumbTint="@color/colorPrimary"/>
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
 
             <SeekBar
-                style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="10"
-                android:thumbTint="@color/colorPrimary"/>
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
 
             <SeekBar
-                style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="10"
-                android:thumbTint="@color/colorPrimary"/>
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
 
             <SeekBar
-                style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="10"
-                android:thumbTint="@color/colorPrimary"/>
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
 
             <SeekBar
-                style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="10"
-                android:thumbTint="@color/colorPrimary"/>
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
 
 
 
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:weightSum="80">
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:text="2" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:text="4"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:text="2" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:text="4"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:text="3" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:text="5"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:text="2" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:text="1"/>
+
+        </LinearLayout>
+
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <Button
+            android:text="I'm ready!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
 
 </LinearLayout>
