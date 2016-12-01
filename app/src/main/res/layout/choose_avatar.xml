@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
     android:weightSum="100">
 
     <LinearLayout
@@ -12,10 +13,10 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Whido"
+            android:text="@string/app_name"
             android:textColor="@color/white"
             android:gravity="center"
-            android:textSize="25dp"/>
+            android:textSize="25sp"/>
 
 
     </LinearLayout>
@@ -23,21 +24,45 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginStart="20dp"
         android:layout_weight="10">
-
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Choose your avatar!"
             android:gravity="center"
-            android:textSize="20dp"/>
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="6dp"
+            android:text="Man"
+            android:gravity="center"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:thumbTint="@color/colorPrimaryDark"
+            android:trackTint="@color/secondatyText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:text="Woman"
+            android:gravity="center"/>
+
+
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="40"
+        android:layout_weight="30"
         android:orientation="vertical"
         android:weightSum="100">
 
@@ -45,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:text="Business man"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:gravity="center"
             android:layout_weight="20"/>
 
@@ -53,34 +78,35 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="80"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:orientation="horizontal"
             android:weightSum="100">
 
             <Button
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="20"
-                android:gravity="center_vertical"/>
+                android:layout_height="30dp"
+                android:layout_weight="10"
+                android:layout_gravity="center"
+                android:background="@drawable/flecha_gris_izq"/>
 
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_action_name"
-                android:layout_weight="60"
+                android:src="@drawable/sandra"
+                android:layout_weight="80"
                 android:id="@+id/imageView" />
 
             <Button
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="20"
-                />
+                android:layout_height="30dp"
+                android:layout_weight="10"
+                android:layout_gravity="center"
+                android:background="@drawable/flecha_gris_derecha"/>
 
 
         </LinearLayout>
-
-
-
 
 
     </LinearLayout>
@@ -88,6 +114,158 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="50"></LinearLayout>
+        android:layout_weight="50"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:weightSum="100">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="45"
+            android:orientation="vertical"
+            android:weightSum="80">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:text="Night Life"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:text="Culture"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:text="Eating/Drinking"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:text="Sports"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:text="Education/Formation"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:text="Shopping"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:text="Music"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:text="Others"
+            android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="55"
+            android:orientation="vertical"
+            android:weightSum="80">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <Button
+            android:text="I'm ready!"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/button2"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_shape"
+            android:elevation="10dp"/>
+
+    </RelativeLayout>
 
 </LinearLayout>

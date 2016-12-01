@@ -23,8 +23,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/ic_action_name"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"            android:layout_alignParentEnd="true"
             android:id="@+id/button" />
 
     </RelativeLayout>
