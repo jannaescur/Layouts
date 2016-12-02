@@ -24,7 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".profile" />
-        <activity android:name=".map_events"></activity>
+        <activity android:name=".map_events" />
+        <activity android:name=".SearchEventsList"></activity>
     </application>
 
 </manifest>

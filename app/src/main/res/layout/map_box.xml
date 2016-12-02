@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="255dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:weightSum="1"
+            android:background="@color/colorPrimaryLight">
+
+            <TextView
+                android:text="Title"
+                android:layout_width="212dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/title" />
+
+            <TextView
+                android:text="Time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/time" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    app:srcCompat="@drawable/peoplegoing_t"
+                    android:id="@+id/people"
+                    android:background="@drawable/rounded"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+
+                <TextView
+                    android:text="125 people are going"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/number_people"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bt_like"
+                        android:cropToPadding="false"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/button_like"
+                        android:layout_gravity="left" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bt_dislike"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/button_dislike"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="20dp" />
+                </LinearLayout>
+
+                <Button
+                    android:text="JOIN!"
+                    android:layout_width="74dp"
+                    android:layout_height="33dp"
+                    android:id="@+id/bt_join"
+                    android:background="@drawable/button_shape"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
