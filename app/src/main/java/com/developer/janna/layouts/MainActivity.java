@@ -56,7 +56,26 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.create_event);
 
         TimeEdit = (EditText) findViewById(R.id.editText1);
-        TimeEdit.setOnClickListener(new View.OnClickListener() {
+        imageViewLoad = (ImageView) findViewById(R.id.photo_device);
+        LoadImage = (Button)findViewById(R.id.button_image);
+
+
+        LoadImage.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                intent = new Intent(Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+                startActivityForResult(intent, IMG_RESULT);
+
+            }
+
+        });
+
+
+            TimeEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showTruitonTimePickerDialog(v);
@@ -66,49 +85,43 @@ public class MainActivity extends FragmentActivity {
             }
         });
 
-        imageViewLoad = (ImageView) findViewById(R.id.image_event);
-        LoadImage = (Button) findViewById(R.id.button_photo);
-
-        LoadImage.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-           /* public void onClick(View v) {
-
-                intent = new Intent(Intent.ACTION_PICK,
-                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-
-                startActivityForResult(intent, IMG_RESULT);
-
-            }*/
-            public void onClick(View view) {
-                Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-                photoPickerIntent.setType("image/*");
-                startActivityForResult(photoPickerIntent, SELECT_PHOTO);
-            }
-        });
-
     }
 
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
-        super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        try {
 
-        switch (requestCode) {
-            case SELECT_PHOTO:
-                if (resultCode == RESULT_OK) {
-                    try {
-                        final Uri imageUri = imageReturnedIntent.getData();
-                        final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-                        final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-                        imageViewLoad.setImageBitmap(selectedImage);
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    }
+            if (requestCode == IMG_RESULT && resultCode == RESULT_OK
+                    && null != data) {
 
-                }
+
+                Uri URI = data.getData();
+                String[] FILE = { MediaStore.Images.Media.DATA };
+
+
+                Cursor cursor = getContentResolver().query(URI,
+                        FILE, null, null, null);
+
+                cursor.moveToFirst();
+
+                int columnIndex = cursor.getColumnIndex(FILE[0]);
+                ImageDecode = cursor.getString(columnIndex);
+                cursor.close();
+
+                imageViewLoad.setImageBitmap(BitmapFactory
+                        .decodeFile(ImageDecode));
+
+            }
+        } catch (Exception e) {
+            Toast.makeText(this, "Please try again", Toast.LENGTH_LONG)
+                    .show();
         }
+
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -33,97 +33,239 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="80"
-        android:orientation="vertical"
-        android:weightSum="60"
-        android:background="@drawable/layout_superposat_shape"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:elevation="10dp">
+        android:fillViewport="true">
 
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="7"
-            android:hint="Title"
-            android:background="@drawable/edit_text_shape"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:textCursorDrawable="@null">
-        </EditText>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="100"
+            android:background="@drawable/layout_superposat_shape"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:elevation="10dp">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="7"
-            android:hint="Date and Time"
-            android:background="@drawable/edit_text_shape"
-            android:layout_marginBottom="10dp"
-            android:textCursorDrawable="@null"
-            android:id="@+id/editText1">
-        </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:hint="Title"
+                android:background="@drawable/edit_text_shape"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textCursorDrawable="@null">
+            </EditText>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="7"
-            android:hint="Place"
-            android:background="@drawable/edit_text_shape"
-            android:layout_marginBottom="10dp"
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:hint="Date and Time"
+                android:background="@drawable/edit_text_shape"
+                android:layout_marginBottom="10dp"
+                android:textCursorDrawable="@null"
+                android:id="@+id/editText1">
+            </EditText>
 
-            android:textCursorDrawable="@null">
-        </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:hint="Place"
+                android:background="@drawable/edit_text_shape"
+                android:layout_marginBottom="10dp"
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="7"
-            android:hint="Description"
-            android:background="@drawable/edit_text_shape"
-            android:layout_marginBottom="10dp"
-            android:textCursorDrawable="@null">
-        </EditText>
+                android:textCursorDrawable="@null">
+            </EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="20"
+                android:hint="Description"
+                android:background="@drawable/edit_text_shape"
+                android:layout_marginBottom="10dp"
+                android:textCursorDrawable="@null">
+            </EditText>
 
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="7"
-            android:background="@drawable/edit_text_shape"
-            android:layout_marginBottom="10dp"
-            android:entries="@array/categories"></Spinner>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="70"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="100">
 
-        <Button
-            android:layout_width="90dp"
-            android:layout_height="0dp"
-            android:layout_weight="5"
-            android:hint="Add a photo"
-            android:layout_gravity="center"
-            android:id="@+id/button_photo"
 
-            android:background="@drawable/button_shape_light">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:orientation="vertical"
+                    android:weightSum="80">
 
-        </Button>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:text="Night Life"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:text="Culture"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:text="Eating/Drinking"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:text="Sports"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:text="Education/Formation"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:text="Shopping"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:text="Music"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:text="Others"
+                        android:gravity="center_vertical"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="20"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/image_event"
-            android:layout_gravity="center"/>
+                </LinearLayout>
 
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:orientation="vertical"
+                    android:weightSum="80">
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:thumbTint="@color/colorPrimary"
+                        android:progressTint="@color/colorPrimary" />
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:thumbTint="@color/colorPrimary"
+                        android:progressTint="@color/colorPrimary"/>
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:thumbTint="@color/colorPrimary"
+                        android:progressTint="@color/colorPrimary"/>
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:thumbTint="@color/colorPrimary"
+                        android:progressTint="@color/colorPrimary"/>
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:thumbTint="@color/colorPrimary"
+                        android:progressTint="@color/colorPrimary"/>
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:thumbTint="@color/colorPrimary"
+                        android:progressTint="@color/colorPrimary"/>
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:thumbTint="@color/colorPrimary"
+                        android:progressTint="@color/colorPrimary"/>
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:thumbTint="@color/colorPrimary"
+                        android:progressTint="@color/colorPrimary"/>
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7"
+                android:text="You have 40 points left"
+                android:gravity="center" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:id="@+id/button_image"
+                android:background="@drawable/button_shape_light"
+                android:layout_gravity="center"
+                android:text="Add a photo!"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:id="@+id/photo_device"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="5dp">
 
         <Button
             android:layout_width="wrap_content"
