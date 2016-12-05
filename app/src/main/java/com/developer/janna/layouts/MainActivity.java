@@ -53,7 +53,7 @@ public class MainActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.map_box);
+        setContentView(R.layout.create_event);
 
         TimeEdit = (EditText) findViewById(R.id.editText1);
         imageViewLoad = (ImageView) findViewById(R.id.photo_device);

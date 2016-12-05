@@ -18,7 +18,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/event_image"
+            app:srcCompat="@drawable/music"
             android:id="@+id/event_img"
             android:layout_weight="1" />
 
