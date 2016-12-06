@@ -29,6 +29,7 @@
 
         </activity>
         <activity android:name=".profile" />
+        <activity android:name=".rate_event"/>
         <activity android:name=".map_events" />
         <activity android:name=".SearchEventsList"></activity>
     </application>
