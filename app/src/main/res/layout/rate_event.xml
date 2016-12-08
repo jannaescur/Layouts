@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/rounded"
+        android:orientation="vertical"
+        android:weightSum="100"
+        android:elevation="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:layout_marginTop="20dp"
+            android:text="Rate this event!"
+            android:gravity="center"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:text="Presentació Llibre ‘Montserrat Roig. La memòria viva’"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <RatingBar
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:progressTint="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="25"
+            android:layout_marginTop="10dp"
+            android:text="Do you want to stay in?"
+            android:gravity="center"
+            android:textSize="20dp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"
+                android:text="YES"
+                android:textColor="@color/white"
+                android:background="@drawable/button_shape"
+                android:elevation="10dp"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:text="NO"
+                android:textColor="@color/white"
+                android:background="@drawable/button_shape"
+                android:elevation="10dp"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

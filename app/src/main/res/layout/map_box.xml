@@ -92,6 +92,7 @@
 
                 <Button
                     android:text="JOIN!"
+                    android:textColor="@color/white"
                     android:layout_width="74dp"
                     android:layout_height="33dp"
                     android:id="@+id/bt_join"

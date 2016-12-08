@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.DatePicker;
 import android.support.v4.app.DialogFragment;
@@ -33,6 +34,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Date;
+import java.util.Locale;
 
 import static com.developer.janna.layouts.MainActivity.TimeEdit;
 import static com.developer.janna.layouts.R.id.imageView;
@@ -46,16 +48,18 @@ public class MainActivity extends FragmentActivity {
     Button LoadImage;
     Intent intent;
     String[] FILE;
+    private int PICK_IMAGE_REQUEST = 1;
 
 
-    static EditText TimeEdit;
+    static TextView TimeEdit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.map_box);
+        setContentView(R.layout.create_event);
 
-        TimeEdit = (EditText) findViewById(R.id.editText1);
+        TimeEdit = (TextView) findViewById(R.id.editText1);
+
         imageViewLoad = (ImageView) findViewById(R.id.photo_device);
         LoadImage = (Button)findViewById(R.id.button_image);
 
@@ -65,10 +69,12 @@ public class MainActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
 
-                intent = new Intent(Intent.ACTION_PICK,
-                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-
-                startActivityForResult(intent, IMG_RESULT);
+                Intent intent = new Intent();
+// Show only images, no videos or anything else
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+// Always show the chooser (if there are multiple options available)
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
 
             }
 
@@ -87,39 +93,26 @@ public class MainActivity extends FragmentActivity {
 
     }
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        try {
 
-            if (requestCode == IMG_RESULT && resultCode == RESULT_OK
-                    && null != data) {
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
 
+            Uri uri = data.getData();
 
-                Uri URI = data.getData();
-                String[] FILE = { MediaStore.Images.Media.DATA };
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+                // Log.d(TAG, String.valueOf(bitmap));
 
-
-                Cursor cursor = getContentResolver().query(URI,
-                        FILE, null, null, null);
-
-                cursor.moveToFirst();
-
-                int columnIndex = cursor.getColumnIndex(FILE[0]);
-                ImageDecode = cursor.getString(columnIndex);
-                cursor.close();
-
-                imageViewLoad.setImageBitmap(BitmapFactory
-                        .decodeFile(ImageDecode));
-
+                //ImageView imageView = (ImageView) findViewById(R.id.imageView);
+                imageViewLoad.setImageBitmap(bitmap);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            Toast.makeText(this, "Please try again", Toast.LENGTH_LONG)
-                    .show();
         }
-
     }
+
 
 
 
@@ -141,6 +134,8 @@ public class MainActivity extends FragmentActivity {
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             // Use the current date as the default date in the picker
             final Calendar c = Calendar.getInstance();
+
+
             int year = c.get(Calendar.YEAR);
             int month = c.get(Calendar.MONTH);
             int day = c.get(Calendar.DAY_OF_MONTH);
@@ -171,7 +166,7 @@ public class MainActivity extends FragmentActivity {
             int minute = c.get(Calendar.MINUTE);
 
             // Create a new instance of TimePickerDialog and return it
-            return new TimePickerDialog(getActivity(), this, hour, minute,
+            return new TimePickerDialog(getActivity(), this, hour+1, minute,
                     DateFormat.is24HourFormat(getActivity()));
         }
 
