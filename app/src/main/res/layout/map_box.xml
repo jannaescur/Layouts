@@ -3,105 +3,132 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:gravity="bottom">
 
-    <RelativeLayout
-        android:layout_width="255dp"
-        android:layout_height="151dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/rounded">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/event_image"
+            android:id="@+id/imageView4"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:background="@drawable/rounded"
+            android:padding="10dp" />
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:weightSum="1"
-            android:background="@color/colorPrimaryLight">
-
-            <TextView
-                android:text="Title"
-                android:layout_width="212dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/title" />
-
-            <TextView
-                android:text="Time"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/time" />
+            android:background="@color/colorPrimaryLight"
+            android:padding="10dp">
 
             <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp">
-
-                <ImageView
-                    app:srcCompat="@drawable/peoplegoing_t"
-                    android:id="@+id/people"
-                    android:background="@drawable/rounded"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp" />
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:background="@color/colorPrimaryLight"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="false"
+                android:gravity="right">
 
                 <TextView
-                    android:text="125 people are going"
+                    android:text="Barcelona International Air  Fair"
+                    android:layout_width="212dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:text="16 de diciembre, 18:00h"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/number_people"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:layout_marginLeft="5dp" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/time" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp">
+                <TextView
+                    android:text="The fifth edition of BIAF presents over 100 contemporary exhibitors form 30 cuntries, showcasing the next generation of talent..."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/descrip"
+                    android:textSize="10sp"
+                    android:layout_marginTop="5dp" />
 
                 <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_width="95dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="20dp">
+                    android:layout_marginTop="10dp">
 
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/bt_like"
-                        android:cropToPadding="false"
-                        android:adjustViewBounds="true"
-                        android:background="@drawable/button_like"
-                        android:layout_gravity="left" />
+                    <ImageView
+                        app:srcCompat="@drawable/peoplegoing_t"
+                        android:id="@+id/people"
+                        android:background="@drawable/rounded"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp" />
 
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/bt_dislike"
-                        android:adjustViewBounds="true"
-                        android:background="@drawable/button_dislike"
-                        android:layout_gravity="right"
-                        android:layout_marginLeft="20dp" />
+                    <TextView
+                        android:text="125 people are going"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/number_people"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="12sp" />
+
                 </LinearLayout>
 
-                <Button
-                    android:text="JOIN!"
-                    android:textColor="@color/white"
-                    android:layout_width="74dp"
-                    android:layout_height="33dp"
-                    android:id="@+id/bt_join"
-                    android:background="@drawable/button_shape"
-                    android:layout_gravity="right"
-                    android:layout_marginLeft="20dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="95dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/bt_like"
+                            android:cropToPadding="false"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/button_like"
+                            android:layout_gravity="left" />
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/bt_dislike"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/button_dislike"
+                            android:layout_gravity="right"
+                            android:layout_marginLeft="20dp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:text="+ INFO"
+                        android:textColor="@color/white"
+                        android:layout_width="74dp"
+                        android:layout_height="33dp"
+                        android:id="@+id/bt_join"
+                        android:background="@drawable/button_shape"
+                        android:layout_gravity="right" />
+                </LinearLayout>
+
             </LinearLayout>
 
-        </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
 
-    </RelativeLayout>
 </LinearLayout>

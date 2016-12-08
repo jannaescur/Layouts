@@ -17,10 +17,13 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/music"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/event_image"
+            android:background="@drawable/rounded"
             android:id="@+id/event_img"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:elevation="1dp"
+            android:layout_marginLeft="10dp" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -29,31 +32,32 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:gravity="right"
-            android:layout_weight="3.88">
+            android:layout_weight="3.88"
+            android:id="@+id/LinearLayout">
 
             <TextView
-                android:text="Title"
+                android:text="@string/title_event"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView"
+                android:id="@+id/title"
                 android:textSize="18sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp" />
 
             <TextView
-                android:text="Date and time"
+                android:text="@string/date_event"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView2"
+                android:id="@+id/date_time"
                 android:textSize="18sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp" />
 
             <TextView
-                android:text="Place"
+                android:text="@string/place_event"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView3"
+                android:id="@+id/place"
                 android:textSize="18sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"

@@ -10,7 +10,9 @@
         <item>Music</item>
         <item>Others</item>
     </string-array>
-
+    <string name="title_event">Title</string>
+    <string name="date_event">Date and time</string>
+    <string name="place_event">Place</string>
 
 
 </resources>
